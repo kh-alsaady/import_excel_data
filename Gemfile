@@ -7,8 +7,10 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
+group :development, :test do
+  gem 'sqlite3'
+end
 
-gem 'sqlite3'
 gem 'roo'
 gem 'roo-xls'
 
