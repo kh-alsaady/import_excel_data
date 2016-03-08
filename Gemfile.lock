@@ -59,6 +59,7 @@ GEM
     minitest (5.8.4)
     nokogiri (1.6.7.2-x86-mingw32)
       mini_portile2 (~> 2.0.0.rc2)
+    pg (0.18.4-x86-mingw32)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -124,6 +125,7 @@ DEPENDENCIES
   active_model_serializers
   apipie-params
   apipie-rails
+  pg
   rails (= 4.2.5)
   rails-api
   roo
