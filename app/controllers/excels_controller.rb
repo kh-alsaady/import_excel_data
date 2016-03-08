@@ -7,7 +7,7 @@ class ExcelsController < ApplicationController
   def index
   end
   
-  api 'POST', 'excel/import', 'Import excel data'
+  api 'POST', 'excels/import', 'Import excel data'
   param :file, ActionDispatch::Http::UploadedFile, desc: "Excel file", required: true
   def import
     @data = Excel.import(params[:file])
