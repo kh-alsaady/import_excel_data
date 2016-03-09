@@ -1,4 +1,5 @@
-class Excel < ActiveRecord::Base
+class Excel
+  
   def self.import(file)
     spreadsheet = open_spreadsheet(file)
     header = spreadsheet.row(1)

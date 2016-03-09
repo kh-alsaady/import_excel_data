@@ -44,6 +44,10 @@ GEM
       json
     arel (6.0.3)
     builder (3.2.2)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     concurrent-ruby (1.0.1)
     erubis (2.7.0)
     globalid (0.3.6)
@@ -55,10 +59,17 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.99.1)
+    mimemagic (0.3.0)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     nokogiri (1.6.7.2-x86-mingw32)
       mini_portile2 (~> 2.0.0.rc2)
+    paperclip (4.3.5)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (= 0.3.0)
     pg (0.18.4-x86-mingw32)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -125,6 +136,7 @@ DEPENDENCIES
   active_model_serializers
   apipie-params
   apipie-rails
+  paperclip
   pg
   rails (= 4.2.5)
   rails-api

@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
   
   apipie
-  resources :excels, only: [] do
-    post :import, on: :collection
-    post :test, on: :collection
+  
+  namespace :api, default: {format: :json} do
+    namespace :v1 do
+      resources :excels, path: 'excel', as: :excel, only: [:index] do
+        post :import, on: :collection
+        post :test, on: :collection
+      end
+    end
   end
   
-  
-  match '*all' => 'application#cors', via: :options
+  #match '*all' => 'application#cors', via: :options
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
